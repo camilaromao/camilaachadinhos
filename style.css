@@ -1,0 +1,453 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS DE FONTE E BODY
+   ========================================================================== */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:wght@100;300;400;600&family=Instrument+Sans:wght@400;500;600&display=swap');
+
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Instrument Sans', Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   CONTAINER PRINCIPAL (ESTRUTURA DO FIGMA)
+   ========================================================================== */
+.canvas-figma {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CARD CINZA PRINCIPAL */
+.card-fundo-cinza {
+    position: relative;
+    background-color: #e3e3e3;
+    border-radius: 45px;
+    padding: 60px 50px 50px 50px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* MENU DO TOPO */
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+}
+
+.nome-site {
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+/* CONTAINER DO DROPDOWN (COLEÇÕES) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.2s ease;
+}
+
+.dropbtn:hover {
+    color: #655cdb;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    min-width: 210px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 8px 0;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 20px;
+    display: block;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2effd;
+    color: #655cdb;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.link-menu {
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    transition: opacity 0.2s ease;
+}
+
+.link-menu:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   TÍTULOS SUPERIORES DO BANNER
+   ========================================================================== */
+.titulos-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 40px auto 30px auto;
+    position: relative;
+    z-index: 5;
+}
+
+.lado-esquerdo h2, 
+.lado-direito h2 {
+    font-family: 'Josefin Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.lado-direito {
+    text-align: right;
+}
+
+.destaque-roxo {
+    font-family: 'Itim', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #655cdb;
+    font-size: 76px;
+    margin: 0;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   RETÂNGULO ROXO INFERIOR
+   ========================================================================== */
+.card-roxo {
+    position: relative;
+    margin-top: 180px;
+    background-color: #928bd7;
+    border-radius: 35px;
+    min-height: 320px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.texto-card-roxo {
+    max-width: 380px;
+}
+
+.texto-card-roxo h3 {
+    font-family: 'Itim', Helvetica, sans-serif;
+    color: #000000;
+    font-size: 34px;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+}
+
+.texto-card-roxo p {
+    font-family: 'Itim', Helvetica, sans-serif;
+    color: #000000;
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    line-height: 1.25;
+}
+
+.texto-card-roxo .subtexto {
+    font-family: 'Itim', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container-foto-minnie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+.foto-minnie {
+    width: 220px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-ver-achadinhos {
+    display: inline-block;
+    background-color: #cfc0f2;
+    color: #000000;
+    padding: 14px 32px;
+    border-radius: 25px;
+    font-family: 'Itim', Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-ver-achadinhos:hover {
+    background-color: #beaced;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   MODELO CENTRAL SOBREPOSTA (FOTO DO MEIO)
+   ========================================================================== */
+.modelo-central-sobreposta {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 520px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   SEÇÃO FIXA DOS CARDS DE PRODUTOS
+   ========================================================================== */
+.container-cards {
+    max-width: 1200px;
+    margin: 60px auto 40px auto;
+    padding: 0 20px;
+    clear: both;
+}
+
+.secao-cards {
+    font-family: 'Itim', sans-serif;
+    font-size: 28px;
+    color: #655cdb;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card-produto {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e0e0e0;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.card-produto h3 {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222222;
+    margin: 0 0 8px 0;
+}
+
+.card-produto p {
+    font-size: 14px;
+    color: #666666;
+    margin: 0 0 15px 0;
+}
+
+.card-produto .preco {
+    font-family: 'Itim', sans-serif;
+    font-size: 24px;
+    color: #655cdb;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-produto .btn-comprar {
+    display: block;
+    width: 100%;
+    background-color: #928bd7;
+    color: #ffffff;
+    padding: 12px 0;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s ease;
+}
+
+.card-produto .btn-comprar:hover {
+    background-color: #655cdb;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .destaque-roxo {
+        font-size: 56px;
+    }
+    .lado-esquerdo h2, 
+    .lado-direito h2 {
+        font-size: 28px;
+    }
+    .modelo-central-sobreposta {
+        height: 420px;
+    }
+    .card-roxo {
+        min-height: 300px;
+        padding: 25px 30px;
+    }
+    .texto-card-roxo h3 {
+        font-size: 26px;
+    }
+    .texto-card-roxo p {
+        font-size: 18px;
+    }
+    .foto-minnie {
+        width: 170px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .canvas-figma {
+        padding: 10px;
+    }
+
+    .card-fundo-cinza {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-topo {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .titulos-topo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .lado-direito {
+        text-align: center;
+    }
+
+    .lado-esquerdo h2, 
+    .lado-direito h2 {
+        font-size: 24px;
+    }
+
+    .destaque-roxo {
+        font-size: 48px;
+    }
+
+    .modelo-central-sobreposta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        height: 320px;
+        margin: 10px auto;
+    }
+
+    .card-roxo {
+        position: relative;
+        margin-top: 20px;
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .texto-card-roxo {
+        max-width: 100%;
+    }
+
+    .container-foto-minnie {
+        width: 100%;
+    }
+}
+
+/* Remove o fundo padrão do tema do Blogger */
+body, .bg-photo, .content-outer {
+    background: #ffffff !important;
+}
+.header-widget {
+    display: none !important; /* Esconde o título texto nativo do Blogger */
+}

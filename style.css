@@ -17,10 +17,16 @@ html, body {
     background-color: #ffffff;
     font-family: 'Instrument Sans', Arial, Helvetica, sans-serif;
     color: #000000;
+    overflow-x: hidden; /* Evita rolagem lateral no mobile */
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ==========================================================================
@@ -346,6 +352,21 @@ a {
     background-color: #655cdb;
 }
 
+/* FOOTER REVISADO E RESPONSIVO */
+footer {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto 20px auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
 /* ==========================================================================
    RESPONSIVIDADE (MEDIA QUERIES)
    ========================================================================== */
@@ -358,9 +379,11 @@ a {
         font-size: 28px;
     }
     .modelo-central-sobreposta {
-        height: 420px;
+        height: 400px;
+        top: 180px;
     }
     .card-roxo {
+        margin-top: 120px;
         min-height: 300px;
         padding: 25px 30px;
     }
@@ -382,16 +405,14 @@ a {
     }
 
     .card-fundo-cinza {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 30px 20px;
+        border-radius: 25px;
     }
 
     .menu-topo {
         width: 100%;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
         text-align: center;
     }
 
@@ -414,25 +435,29 @@ a {
     }
 
     .destaque-roxo {
-        font-size: 48px;
+        font-size: 44px;
     }
 
+    /* Solução para a imagem central no celular: torna-a relativa no fluxo */
     .modelo-central-sobreposta {
         position: relative;
         top: 0;
         left: 0;
         transform: none;
-        height: 320px;
-        margin: 10px auto;
+        height: auto;
+        max-height: 320px;
+        margin: 20px auto;
+        display: block;
+        pointer-events: auto;
     }
 
     .card-roxo {
-        position: relative;
         margin-top: 20px;
         flex-direction: column;
         padding: 30px 20px;
         text-align: center;
         gap: 25px;
+        border-radius: 25px;
     }
 
     .texto-card-roxo {
@@ -442,12 +467,16 @@ a {
     .container-foto-minnie {
         width: 100%;
     }
+
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Remove o fundo padrão do tema do Blogger */
+/* Blogger Reset Overlay */
 body, .bg-photo, .content-outer {
     background: #ffffff !important;
 }
 .header-widget {
-    display: none !important; /* Esconde o título texto nativo do Blogger */
+    display: none !important;
 }

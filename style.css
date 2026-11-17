@@ -21,7 +21,6 @@ html, body {
     overflow-x: hidden; /* Evita rolagem lateral no mobile */
 }
 
-
 /* MENU DO TOPO */
 .menu-topo {
     display: flex;
@@ -351,12 +350,12 @@ footer {
         text-align: center;
     }
 
-   /* .secao-shopee {
+    .secao-shopee {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    } */
+    } 
 
     .titulo {
         font-size: 30px;

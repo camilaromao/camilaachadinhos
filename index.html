@@ -12,179 +12,229 @@
 </head>
 <body>
 
-<nav class="menu-topo">
-    <h1 class="nome-site">CAMILA ACHADINHOS</h1>
+    <header class="topo-wrapper">
+        <nav class="menu-topo">
+            <div class="marca-container">
+                <img src="assets/logo.png" alt="imagem do logo" class="logo-img">
+                <h1 class="nome-site">CAMILA ACHADINHOS</h1>
+            </div>
 
-    <img src="assets/logo.png" alt="imagem do logo">
+            <div class="redes-sociais">
+                <a href="https://br.pinterest.com/Camilaachadinhoos/" target="_blank" aria-label="Pinterest">
+                    <img src="assets/pinterest.png" alt="icone do pinterest">
+                </a>
+                <a href="https://www.instagram.com/camilaachadinhoos" target="_blank" aria-label="Instagram">
+                    <img src="assets/instagram.png" alt="icone do instagram">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61572045580956&locale=pt_BR" target="_blank" aria-label="Facebook">
+                    <img src="assets/facebook.png" alt="icone do facebook">
+                </a>
+            </div>
+        </nav>
+    </header>
 
-    <div class="redes-sociais">
-
-    <a href="https://br.pinterest.com/Camilaachadinhoos/" target="_blank"><img src="assets/pinterest.png" alt="icone do pinterest" ></a>
-
-     <a href="https://www.instagram.com/camilaachadinhoos" target="_blank"><img src="assets/instagram.png" alt="icone do facebook"></a>
-
-      <a href="https://www.facebook.com/profile.php?id=61572045580956&locale=pt_BR" target="_blank"><img src="assets/facebook.png" alt="icone do facebook"></a>
-      </div>
-
-</nav>
-
-
-    <section>
+    <main>
+        <!-- Banner Principal -->
+        <section class="hero-section">
             <div class="titulos-topo">
+                <span class="badge-topo">✨ Seleção diária de ofertas</span>
                 <div class="titulo">
-                <h2>Os melhores achadinhos!</h2> 
-               
-                <div>
-                <p>Pequenos preços, grandes descobertas!</p>
-                <p>Moda • Beleza • Casa • Tecnologia</p>
+                    <h2>Os melhores achadinhos!</h2>
+                    <p class="subtitulo">Pequenos preços, grandes descobertas!</p>
+                    <p class="categorias-tag">Moda • Beleza • Casa • Tecnologia</p>
                 </div>
-             </div>
-             </div> 
-    </section>
 
-    <section>
-              <div class="botoes-topo">
-                <a href="https://collshp.com/colecaocamilaachadinhos" target="_blank">Shopee</a>
-                <a href="https://meli.la/2xX3s71" target="_blank">Mercado livre</a>
-             </div>
-    </section>
+                <div class="botoes-topo">
+                    <a href="https://collshp.com/colecaocamilaachadinhos" target="_blank" class="btn-plataforma btn-shopee">
+                        🛍️ Coleção Shopee
+                    </a>
+                    <a href="https://meli.la/2xX3s71" target="_blank" class="btn-plataforma btn-ml">
+                        🤝 Mercado livre
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <!--  ============= Cards de secão de vitrine Shopee =========== -->
+        <!-- Cards de Seção de Vitrine Shopee -->
+        <section class="container-vitrine">
+            <h2 class="secao-cards">Seção de achadinhos Shopee</h2>
 
-    <section>
-    <h2 class="secao-cards">Seção de achadinhos Shopee</h2>
+            <div class="grid-vitrine">
+                <a href="https://collshp.com/colecaocamilaachadinhos/category/2651668" target="_blank" class="card-Vitrine">
+                    <div class="img-vitrine-box">
+                        <img src="assets/moda.png" alt="imagem da seção de moda">
+                    </div>
+                    <span>Moda</span>
+                </a>
 
-       <div class="secao-shopee">
+                <a href="https://collshp.com/colecaocamilaachadinhos/category/2651853" target="_blank" class="card-Vitrine">
+                    <div class="img-vitrine-box">
+                        <img src="assets/beleza.png" alt="imagem da seção de beleza">
+                    </div>
+                    <span>Beleza</span>
+                </a>
 
-        <article class="card-Vitrine">
-        <img src="assets/moda.png" alt="imagem da seção de moda">
-        <a href="https://collshp.com/colecaocamilaachadinhos/category/2651668" target="_blank">Moda</a>
-        </article>
+                <a href="https://collshp.com/colecaocamilaachadinhos/category/2758036" target="_blank" class="card-Vitrine">
+                    <div class="img-vitrine-box">
+                        <img src="assets/casa.png" alt="imagem da seção de casa">
+                    </div>
+                    <span>Casa</span>
+                </a>
 
-        <article class="card-Vitrine">
-        <img src="assets/beleza.png" alt="imagem da seção de beleza">
-        <a href="https://collshp.com/colecaocamilaachadinhos/category/2651853" target="_blank">Beleza</a>
-        </article>
+                <a href="https://collshp.com/colecaocamilaachadinhos/category/2785971" target="_blank" class="card-Vitrine">
+                    <div class="img-vitrine-box">
+                        <img src="assets/esporte.png" alt="imagem da seção de esporte">
+                    </div>
+                    <span>Esporte</span>
+                </a>
 
-     <article class="card-Vitrine">
-        <img src="assets/casa.png" alt="imagem da seção de casa">
-        <a href="https://collshp.com/colecaocamilaachadinhos/category/2758036" target="_blank">Casa</a>
-        </article>
+                <a href="https://collshp.com/colecaocamilaachadinhos/category/3859675" target="_blank" class="card-Vitrine">
+                    <div class="img-vitrine-box">
+                        <img src="assets/maquiagem.png" alt="imagem da seção de maquiagem">
+                    </div>
+                    <span>Maquiagem</span>
+                </a>
 
- </div>
+                <a href="https://collshp.com/colecaocamilaachadinhos/category/2651714" target="_blank" class="card-Vitrine">
+                    <div class="img-vitrine-box">
+                        <img src="assets/informatica.png" alt="imagem da seção de informatica">
+                    </div>
+                    <span>Informática</span>
+                </a>
+            </div>
+        </section>
 
-    <div class="secao-shopee">
-        <article class="card-Vitrine">
-        <img src="assets/esporte.png" alt="imagem da seção de esporte">
-        <a href="https://collshp.com/colecaocamilaachadinhos/category/2785971" target="_blank">Esporte</a>
+        <!-- Cards de Produtos - Destaques -->
+        <section class="container-cards">
+            <h2 class="secao-cards">Destaques da semana</h2>
 
-    </article>
+            <div class="grid-produtos">
+                <article class="card-produto">
+                    <span class="selo-achadinho">🔥 Achadinho</span>
+                    <div class="img-produto-wrapper">
+                        <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m5h0u4xim7qqcb@resize_w450_nl.webp" alt="imagem da sandalia">
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">SANDÁLIA RASTEIRINHA FEMININA PLANA GLADIADORA Jesus</h3>
+                        <p class="descricao-produto">Uma escolha perfeita para quem busca conforto e estilo em todas as ocasiões. Desde looks casuais até look pra festa e passeio. é super versátil.</p>
+                    </div>
+                    <div class="rodape-card">
+                        <span class="preco-produto">R$29,39</span>
+                        <a href="https://s.shopee.com.br/1gKEwpcitL" target="_blank" class="btn-comprar">Comprar na Shopee</a>
+                    </div>
+                </article>
 
-    
-        <article class="card-Vitrine">
-        <img src="assets/maquiagem.png" alt="imagem da seção de maquiagem">
-        <a href="https://collshp.com/colecaocamilaachadinhos/category/3859675" target="_blank">Maquiagem</a>
-        </article>
+                <article class="card-produto">
+                    <span class="selo-achadinho">🔥 Achadinho</span>
+                    <div class="img-produto-wrapper">
+                        <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3ci1l7cvi2gd5@resize_w450_nl.webp" alt="imagem da bermuda">
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Short Academia Feminino Cintura Alta Canelado Não Transparente</h3>
+                        <p class="descricao-produto">Tecido premium para academia e treino intenso. Conforto, firmeza e segurança para elevar seu treino.</p>
+                    </div>
+                    <div class="rodape-card">
+                        <span class="preco-produto">R$47,92</span>
+                        <a href="https://s.shopee.com.br/6fiuuZ5xDj" target="_blank" class="btn-comprar">Comprar na Shopee</a>
+                    </div>
+                </article>
 
-        
-     <article class="card-Vitrine">
-        <img src="assets/informatica.png" alt="imagem da seção de informatica">
-        <a href="https://collshp.com/colecaocamilaachadinhos/category/2651714" target="_blank">Informática</a>
-        </article>
- </div>
+                <article class="card-produto">
+                    <span class="selo-achadinho">🔥 Achadinho</span>
+                    <div class="img-produto-wrapper">
+                        <img class="img-produto" src="https://down-br.img.susercontent.com/file/sg-11134201-825b2-mt8rla4w20oxf5@resize_w450_nl.webp" alt="Imagem da camisa">
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Camiseta Feminina Streetwear Espotiva 23 Urbana Larga Algodão</h3>
+                        <p class="descricao-produto">Caimento perfeito no corpo, Respirável e confortável para o dia todo.</p>
+                    </div>
+                    <div class="rodape-card">
+                        <span class="preco-produto">R$29,90</span>
+                        <a href="https://s.shopee.com.br/6fiuuqcXxb" target="_blank" class="btn-comprar">Comprar na Shopee</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-         <!--  ============= Cards de produtos =========== -->
+        <!-- Cards de Produtos - Mais Destaques -->
+        <section class="container-cards">
+            <h2 class="secao-cards">Mais Destaques da semana</h2>
 
-    </section>
+            <div class="grid-produtos">
+                <article class="card-produto">
+                    <span class="selo-achadinho">⭐ Imperdível</span>
+                    <div class="img-produto-wrapper">
+                        <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-820md-mujicvls5m9v9a@resize_w450_nl.webp" alt="imagem da blusa regata">
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Blusa De academia Feminina Dry Fit Regata Veste Legging</h3>
+                        <p class="descricao-produto">Tapa bumbum Roupas De Academia Fitness Treino Top, leve, fresquinha e com um bom caimento.</p>
+                    </div>
+                    <div class="rodape-card">
+                        <span class="preco-produto">R$25,89</span>
+                        <a href="https://s.shopee.com.br/80EIViN6d5" target="_blank" class="btn-comprar">Comprar na Shopee</a>
+                    </div>
+                </article>
 
-    <section class="container-cards">
-    <h2 class="secao-cards">Destaques da semana</h2>
+                <article class="card-produto">
+                    <span class="selo-achadinho">⭐ Imperdível</span>
+                    <div class="img-produto-wrapper">
+                        <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-820me-mt8hoyf58lj6a0@resize_w450_nl.webp" alt="imagem touca">
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Touca Gorro Jacquard em Lã Unissex Estilo Big | Ideal p/ Frio e Inverno</h3>
+                        <p class="descricao-produto">Super Estilosa com Toque macio e caimento perfeito na cabeça. Modelo caído na nuca tendência que nunca sai de moda</p>
+                    </div>
+                    <div class="rodape-card">
+                        <span class="preco-produto">R$19,90</span>
+                        <a href="https://s.shopee.com.br/9AQFu9XFqO" target="_blank" class="btn-comprar">Comprar na Shopee</a>
+                    </div>
+                </article>
 
-    <div class="grid-produtos">
-        
-        <article class="card-produto">
-            <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m5h0u4xim7qqcb@resize_w450_nl.webp" alt="imagem da sandalia">
-        </img>
-            <h3 class="nome-produto">SANDÁLIA RASTEIRINHA FEMININA PLANA GLADIADORA Jesus</h3>
-            <p class="descricao-produto">Uma escolha perfeita para quem busca conforto e estilo em todas as ocasiões. Desde looks casuais até look pra festa e passeio. é super versátil.</p>
-            <span class="preco-produto">R$29,39</span>
-            <a href=" https://s.shopee.com.br/1gKEwpcitL" target="_blank" class="btn-comprar">Comprar na Shopee</a>
-        </article>
+                <article class="card-produto">
+                    <span class="selo-achadinho">⭐ Imperdível</span>
+                    <div class="img-produto-wrapper">
+                        <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mbfmwdkzit14e4@resize_w450_nl.webp" alt="Imagem da Bolsa de maquiagem" class="img-produto">
+                    </div>
+                    <div class="info-produto">
+                        <h3 class="nome-produto">Tênis Feminino Moderno Conforto Estilo</h3>
+                        <p class="descricao-produto">Casual Esportivo Tendência. Calce Facil, conforto e estilo para os seus pés. Delicado e super moderno ele trás uma versatilidade para compor o seu look</p>
+                    </div>
+                    <div class="rodape-card">
+                        <span class="preco-produto">R$68,99</span>
+                        <a href="https://s.shopee.com.br/80EIWIutMs" target="_blank" class="btn-comprar">Comprar na Shopee</a>
+                    </div>
+                </article>
+            </div>
 
-        <article class="card-produto">
-            <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3ci1l7cvi2gd5@resize_w450_nl.webp" alt="imagem da bermuda "></img>
-            <h3 class="nome-produto">Short Academia Feminino Cintura Alta Canelado Não Transparente</h3>
-            <p class="descricao-produto">Tecido premium para academia e treino intenso. Conforto, firmeza e segurança para elevar seu treino.</p>
-            <span class="preco-produto">R$47,92</span>
-            <a href="https://s.shopee.com.br/6fiuuZ5xDj" target="_blank" class="btn-comprar">Comprar na Shopee</a>
-        </article>
+            <div class="container-mais">
+                <a href="https://collshp.com/colecaocamilaachadinhos" target="_blank" class="btn-ver-achadinhos">
+                    Ver mais da Coleção Shopee ➜
+                </a>
+            </div>
+        </section>
 
-         <article class="card-produto">
-                <img class="img-produto" src="https://down-br.img.susercontent.com/file/sg-11134201-825b2-mt8rla4w20oxf5@resize_w450_nl.webp" alt="Imagem da camisa"></img>
-            <h3 class="nome-produto">Camiseta Feminina Streetwear Espotiva 23 Urbana Larga Algodão</h3>
-            <p class="descricao-produto">Caimento perfeito no corpo, Respirável e confortável para o dia todo.</p>
-            <span class="preco-produto">R$29,90</span>
-            <a href="https://s.shopee.com.br/6fiuuqcXxb
-" target="_blank" class="btn-comprar">Comprar na Shopee</a>
-        </article>
+        <!-- Bloco de Segurança e Redes -->
+        <section class="informacao-seguranca">
+            <div class="card-seguranca">
+                <h3>🔒 Por que comprar pelos nossos links?</h3>
+                <p>Links são confiaveis direto das proprias plataformas Shopee e Mercado livre. assim também, Você nos ajuda comprando atraves destes links, a manter este trabalho sempre atualizado e ativo!</p>
+                
+                <div class="redes-rodape">
+                    <h3>Para não perder nenhuma novidade siga nosso</h3>
+                    <div class="links-sociais-texto">
+                        <a href="https://www.instagram.com/camilaachadinhoos" target="_blank">Instagram</a> 
+                        <span>e</span> 
+                        <a href="https://www.facebook.com/profile.php?id=61572045580956&locale=pt_BR" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    </div>
-
-
-     <section class="container-cards">
-    <h2 class="secao-cards">Mais Destaques da semana</h2>
-
-    <div class="grid-produtos">
-        
-        <article class="card-produto">
-            <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-820md-mujicvls5m9v9a@resize_w450_nl.webp" alt="imagem da blusa regata" >
-        </img>
-            <h3 class="nome-produto">Blusa De academia Feminina Dry Fit Regata Veste Legging</h3>
-            <p class="descricao-produto">Tapa bumbum Roupas De Academia Fitness Treino Top, leve, fresquinha e com um bom caimento.</p>
-            <span class="preco-produto">R$25,89</span>
-            <a href="https://s.shopee.com.br/80EIViN6d5" target="_blank" class="btn-comprar">Comprar na Shopee</a>
-        </article>
-
-        <article class="card-produto">
-            <img class="img-produto" src="https://down-br.img.susercontent.com/file/br-11134207-820me-mt8hoyf58lj6a0@resize_w450_nl.webp" alt="imagem touca" ></img>
-            <h3 class="nome-produto">Touca Gorro Jacquard em Lã Unissex Estilo Big | Ideal p/ Frio e Inverno</h3>
-            <p class="descricao-produto"> Super Estilosa com Toque macio e caimento perfeito na cabeça. Modelo caído na nuca tendência que nunca sai de moda</p>
-            <span class="preco-produto">R$19,90</span>
-            <a href="https://s.shopee.com.br/9AQFu9XFqO" target="_blank" class="btn-comprar">Comprar na Shopee</a>
-        </article>
-
-         <article class="card-produto">
-                <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-mbfmwdkzit14e4@resize_w450_nl.webp" alt="Imagem da Bolsa de maquiagem" class="img-produto" ></img>
-            <h3 class="nome-produto">Tênis Feminino Moderno Conforto Estilo</h3>
-            <p class="descricao-produto">Casual Esportivo Tendência. Calce Facil, conforto e estilo para os seus pés. Delicado e super moderno ele trás uma versatilidade para compor o seu look</p>
-            <span class="preco-produto">R$68,99</span>
-            <a href="https://s.shopee.com.br/80EIWIutMs
-" target="_blank" class="btn-comprar">Comprar na Shopee</a>
-        </article>
-
-    </div>
-
-      <article class="container-mais">
-                    <a href="https://collshp.com/colecaocamilaachadinhos" target="_blank" class="btn-ver-achadinhos">Ver mais da Coleção Shopee</a>      
-        </article>
-</section>
-
-
- <section class="informacao-seguranca">
-    <h3>Por que comprar pelos nossos links?</h3> 
-    <div>
-    <p>Links são confiaveis direto das proprias plataformas Shopee e Mercado livre. assim também, Você nos ajuda comprando atraves destes links, a manter este trabalho sempre atualizado e ativo!</p>
-    </div>
-
-    <div>
-    <h3>Para não perder nenhuma novidade siga nosso </h3>
-    <a href="https://www.instagram.com/camilaachadinhoos" target="_blank"> Instagram</a> e <a href="https://www.facebook.com/profile.php?id=61572045580956&locale=pt_BR" target="_blank"> Facebook</a>
- </div>
- </section>
- 
- <footer>
-    Desenvolvido por Camila achadinhos - 2026 
- </footer>
+    <footer>
+        Desenvolvido por Camila achadinhos - 2026
+    </footer>
 
 </body>
 </html>

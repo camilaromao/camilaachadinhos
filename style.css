@@ -1,8 +1,8 @@
 /* ==========================================================================
-   RESET E CONFIGURAÇÕES GERAIS DE FONTE E BODY
+   RESET E CONFIGURAÇÕES GERAIS
    ========================================================================== */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:wght@100;300;400;600&family=Instrument+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Josefin+Sans:wght@400;600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -14,369 +14,549 @@ html, body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
-    background-image: url('assets/banner-fundo.png');
+    background-color: #46236b; /* Cor de fundo caso a imagem demore */
+    background-image: linear-gradient(rgba(45, 18, 75, 0.55), rgba(45, 18, 75, 0.75)), url('assets/banner-fundo.png');
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     font-family: 'Instrument Sans', Arial, Helvetica, sans-serif;
-    color: #000000;
-    overflow-x: hidden; /* Evita rolagem lateral no mobile */
+    color: #222222;
+    overflow-x: hidden;
 }
 
-/* MENU DO TOPO */
+/* ==========================================================================
+   MENU DO TOPO (CABEÇALHO)
+   ========================================================================== */
+.topo-wrapper {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .menu-topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
-    max-width: 1000px;
+    padding: 12px 24px;
+    max-width: 1150px;
     margin: 0 auto;
-    position: relative;
-    z-index: 20;
+}
+
+.marca-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #745499;
 }
 
 .nome-site {
-    font-family: 'Instrument Sans', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+    font-family: 'Itim', cursive, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #000000;
-    padding: 30px;
+    color: #520e80;
+    margin: 0;
 }
 
-.menu-topo img {
-      width: 50px;
-      border-radius: 20px;
-}
-
-.cupons-shopee img {
-    width: 100%;
-    max-width: 350px;
-    padding: 5px;
-    margin: 1rem;
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .redes-sociais a {
-    margin: 1rem;
-    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: #f3ecff;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.redes-sociais a:hover {
+    transform: translateY(-3px);
+    background-color: #e2d1ff;
 }
 
 .redes-sociais img {
-    width: 30px;
-}
-
-/* CONTAINER DO DROPDOWN (COLEÇÕES) */
-.link-menu {
-    font-family: 'Instrument Sans', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #000000;
-    transition: opacity 0.2s ease;
-    margin: 20px;
-}
-
-.link-menu:hover {
-    opacity: 0.7;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 /* ==========================================================================
-   TÍTULOS SUPERIORES DO BANNER
+   BANNER PRINCIPAL (HERO)
    ========================================================================== */
+.hero-section {
+    max-width: 950px;
+    margin: 35px auto 20px auto;
+    padding: 0 20px;
+}
 
 .titulos-topo {
-   width: 100%;
-   border-radius: 10px;
-   background-color: #f5f5fd98;
-   align-items: center;
-   flex-direction: row;
-   justify-content: center;
-   text-align: center;
+    width: 100%;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.badge-topo {
+    display: inline-block;
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .titulo h2 {
-  font-weight: 800;
-  padding-top: 5px;
-  font-size: 40px;
-
+    font-family: 'Itim', sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    color: #3b0764;
+    margin: 0 0 8px 0;
 }
 
-.titulos-topo p {
-  padding-top: 5px;
-  font-weight: 600;
-  font-size: 20px;
+.titulos-topo .subtitulo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 0 0 6px 0;
+}
+
+.titulos-topo .categorias-tag {
+    font-weight: 600;
+    font-size: 15px;
+    color: #745499;
+    margin: 0;
 }
 
 .botoes-topo {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   padding: 30px;
-   gap: 10px;
-}
-
-.botoes-topo a {
-background-color: #520e80;
-border-radius: 20px;
-width: 120px;
-padding: 10px;
-color: #dddddd;
-font-size: 15px;
-}
-
-.botoes-topo a:hover {
-    background-color: #7463a3;
-}
-
-
-/* ======= Vitrine Seções da Shopee ======== */
-.secao-shopee {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: auto;;
-    object-fit: cover;
+    margin-top: 25px;
+    gap: 15px;
 }
 
-.secao-shopee img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 20px;
-    object-fit: cover;
+.btn-plataforma {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 50px;
+    min-width: 190px;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.btn-plataforma:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.05);
+}
+
+.btn-shopee {
+    background-color: #ee4d2d;
+    color: #ffffff;
+}
+
+.btn-ml {
+    background-color: #ffe600;
+    color: #2d3277;
+}
+
+/* ==========================================================================
+   VITRINE DE CATEGORIAS SHOPEE
+   ========================================================================== */
+.container-vitrine {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.secao-cards {
+    font-family: 'Itim', sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.5px;
+}
+
+.grid-vitrine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .card-Vitrine {
-    background-color: #745499;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    height: 22rem;
+    background: linear-gradient(145deg, #835eb0, #623e8c);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 16px;
     display: flex;
-    border-radius: 20px;
     flex-direction: column;
-    justify-content: center;
-    margin: 1rem;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.card-Vitrine:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.28);
+    background: linear-gradient(145deg, #916bc0, #6d479b);
+}
+
+.img-vitrine-box {
+    width: 100%;
+    height: 210px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.card-Vitrine img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.35s ease;
 }
 
-.card-Vitrine a {
+.card-Vitrine:hover img {
+    transform: scale(1.06);
+}
+
+.card-Vitrine span {
     color: #ffffff;
-    padding: 20px;
-    font-weight: 600;
-    font-size: large;
-}
-
-.card-Vitrine a:hover {
-    color: #a39be9;
+    padding-top: 14px;
+    padding-bottom: 4px;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.3px;
 }
 
 /* ==========================================================================
    SEÇÃO DOS CARDS DE PRODUTOS
    ========================================================================== */
-
 .container-cards {
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 60px auto 40px auto;
-    padding: 0 30px;
-    clear: both;
-}
-
-.secao-cards {
-    font-family: 'Itim', sans-serif;
-    font-size: 28px;
-    color: #e4e3f1;
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    padding: 0 20px;
 }
 
 .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
 }
 
 .card-produto {
+    position: relative;
     background: #ffffff;
     border-radius: 24px;
-    padding: 20px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    border: 1px solid #e0e0e0;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+}
+
+.selo-achadinho {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    background-color: #520e80;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-produto-wrapper {
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f8f8fa;
+    margin-bottom: 14px;
 }
 
 .img-produto {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 15px;
+    transition: transform 0.35s ease;
+}
+
+.card-produto:hover .img-produto {
+    transform: scale(1.04);
+}
+
+.info-produto {
+    flex-grow: 1;
 }
 
 .nome-produto {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #222222;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #1f1f1f;
     margin: 0 0 8px 0;
 }
 
 .descricao-produto {
     font-size: 14px;
-    color: #666666;
-    margin: 0 0 15px 0;
+    line-height: 1.45;
+    color: #555555;
+    margin: 0 0 16px 0;
+}
+
+.rodape-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #e5e5e5;
 }
 
 .preco-produto {
     font-family: 'Itim', sans-serif;
-    font-size: 24px;
-    color: #655cdb;
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-size: 28px;
+    color: #ee4d2d;
+    font-weight: 400;
+    display: block;
 }
 
 .card-produto .btn-comprar {
     display: block;
     width: 100%;
-    background-color: #928bd7;
+    text-align: center;
+    background: linear-gradient(135deg, #ee4d2d, #ff6533);
     color: #ffffff;
-    padding: 12px 0;
+    padding: 13px 0;
     border-radius: 14px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 15px;
-    transition: background 0.2s ease;
+    box-shadow: 0 4px 12px rgba(238, 77, 45, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .card-produto .btn-comprar:hover {
-    background-color: #655cdb;
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(238, 77, 45, 0.45);
+    filter: brightness(1.05);
 }
 
+/* Botão Ver Mais */
 .container-mais {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   padding: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .btn-ver-achadinhos {
     display: inline-block;
-    background-color: #cfc0f2;
-    color: #000000;
-    padding: 14px 32px;
-    border-radius: 25px;
+    background-color: #ffffff;
+    color: #520e80;
+    padding: 16px 36px;
+    border-radius: 50px;
     font-family: 'Itim', Helvetica, sans-serif;
     font-size: 22px;
-    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-ver-achadinhos:hover {
-    background-color: #beaced;
+    background-color: #ffe600;
+    color: #2d3277;
     transform: scale(1.05);
 }
 
-/* ==== Informações de segurança ==== */
+/* ==========================================================================
+   INFORMAÇÕES DE SEGURANÇA
+   ========================================================================== */
 .informacao-seguranca {
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    color: rgb(255, 255, 255);
-}
-
-.informacao-seguranca h3 {
-    font-weight: 400;
-    font-style: italic;
-    font-size: large;
-    margin: 1rem 5rem;
-}
-
-.informacao-seguranca a {
-    font-size: 20px;
-    font-weight: 600;
-    font-style: normal;
-    color: #501a8d;
-}
-
-.informacao-seguranca a:hover {
-    color: #9d94f0;
-}
-
-/* ==== FOOTER REVISADO E RESPONSIVO ===== */
-footer {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
+    max-width: 850px;
     margin: 50px auto 20px auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
+    padding: 0 20px;
+}
+
+.card-seguranca {
+    background: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 30px 25px;
     text-align: center;
-    color: #000000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-seguranca h3 {
+    font-family: 'Itim', sans-serif;
+    font-size: 23px;
+    color: #520e80;
+    margin: 0 0 10px 0;
+}
+
+.card-seguranca p {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #444444;
+    max-width: 650px;
+    margin: 0 auto 22px auto;
+}
+
+.redes-rodape h3 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.links-sociais-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.links-sociais-texto a {
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #745499;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.links-sociais-texto a:hover {
+    background-color: #520e80;
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
-   RESPONSIVIDADE (MEDIA QUERIES)
+   FOOTER
    ========================================================================== */
+footer {
+    width: 100%;
+    padding: 25px 15px 35px 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
 
-   @media screen and (max-width: 768px) {
+/* ==========================================================================
+   RESPONSIVIDADE (TABLETS E CELULARES)
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+    .grid-vitrine,
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media screen and (max-width: 640px) {
     .menu-topo {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-       
+        gap: 12px;
+        padding: 14px 16px;
     }
 
-     .menu-topo img {
-         margin-bottom: 3em;
-     }
-
-    .titulos-topo {
-        display: block;
-        margin: auto;
-        text-align: center;
-    }
-
-    .secao-shopee {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    } 
-
-    .titulo {
-        font-size: 30px;
-        padding: 10px;
-    }
-
-    .secao-cards {
+    .nome-site {
         font-size: 20px;
+    }
+
+    .titulo h2 {
+        font-size: 32px;
+    }
+
+    .titulos-topo .subtitulo {
+        font-size: 17px;
+    }
+
+    .btn-plataforma {
+        width: 100%;
+    }
+
+    .grid-vitrine {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .img-vitrine-box {
+        height: 140px;
+    }
+
+    .card-Vitrine {
+        padding: 10px;
+        border-radius: 18px;
+    }
+
+    .card-Vitrine span {
+        font-size: 16px;
+        padding-top: 10px;
     }
 
     .grid-produtos {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+
+    .secao-cards {
+        font-size: 26px;
     }
 
     .btn-ver-achadinhos {
-        font-size: 20px;
+        font-size: 18px;
+        padding: 14px 26px;
+        width: 100%;
+        text-align: center;
     }
-
-  
-
-   }
+}
